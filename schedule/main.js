@@ -7,65 +7,65 @@ window.onload = function main()
 	week.paddingLeft = 64;
 	
 	var
-	    mon = Day.create( 1, 'Понедельник' ),
-	    tue = Day.create( 2, 'Вторник'     ),
-	    wed = Day.create( 3, 'Среда'       ),
-	    thu = Day.create( 4, 'Четверг'     ),
-	    fri = Day.create( 5, 'Пятница'     ),
-	    sat = Day.create( 6, 'Суббота'     );
-	    
+		mon = Day.create( 1, 'Понедельник' ),
+		tue = Day.create( 2, 'Вторник'     ),
+		wed = Day.create( 3, 'Среда'       ),
+		thu = Day.create( 4, 'Четверг'     ),
+		fri = Day.create( 5, 'Пятница'     ),
+		sat = Day.create( 6, 'Суббота'     );
+		
 	var 
-	    plasm = Subject.create( 'Плазма',    '', Subject.COMMON  ),
-	    inft  = Subject.create( 'ФОИТ',      '', Subject.SPECIAL ),
-	    plis  = Subject.create( 'ПЛИС',      '', Subject.SPECIAL ),
-	    cpl   = Subject.create( 'Совр.Я.П.', '', Subject.COMMON  ),
-	    pyt   = Subject.create( 'Python',    '', Subject.SPECIAL ),
-	    hoc   = Subject.create( 'Ист.Культ.','', Subject.LIBERAL ),
-	    phil  = Subject.create( 'Философия', '', Subject.LIBERAL ),
-	    eng   = Subject.create( 'Ин.Яз.',    '', Subject.LIBERAL ),
-	    cpp   = Subject.create( 'C++',       '', Subject.SPECIAL ),
-	    alg   = Subject.create( 'Алгоритмы', '', Subject.SPECIAL );
-	    
+		symc  = Subject.create( 'Симв.выч.', '', Subject.COMMON  ),
+		exph  = Subject.create( 'Эксп.физ.', '', Subject.COMMON  ),
+
+		pmod  = Subject.create( 'Постмод.',  '', Subject.LIBERAL ),
+		phil  = Subject.create( 'Философия', '', Subject.LIBERAL ),
+		eng   = Subject.create( 'Ин.яз.',    '', Subject.LIBERAL ),
+
+		safe  = Subject.create( 'Безопасн.', '', Subject.SPECIAL ),
+		exan  = Subject.create( 'Эксп.ана.', '', Subject.SPECIAL ),
+		dsp   = Subject.create( 'Цифр.с.п.', '', Subject.SPECIAL ),
+		nit   = Subject.create( 'Нов.и.т.',  '', Subject.SPECIAL );
+		
 	var 
-	    postupaev   = Teacher.create('Поступаев В.В.'),
-	    murahtin    = Teacher.create('Мурахтин С.В.'),
-	    shamirzaev  = Teacher.create('Шамирзаев Т.С.'),
-	    abramkin    = Teacher.create('Абрамкин Д.С.'),
-	    mig_val_idr = Teacher.create('Мигинский, Валеев, Идрисов'),
-	    grozin      = Teacher.create('Грозин А.Г.'),
-	    panina      = Teacher.create('Панина Н.Л.'),
-	    borisov     = Teacher.create('Борисов И.В.'),
-	    anisimova   = Teacher.create('Анисимова Н.К.'),
-	    dunaev      = Teacher.create('Дунаев Александр'),
-	    gat_sten    = Teacher.create('Гатилов, Стененко'),
-	    unknown     = Teacher.create('');
-	    
+		zhuravlev   = Teacher.create('Журавлёв А.Г.'),
+		telnov      = Teacher.create('Тельнов В.И.'),
+		vasilyev    = Teacher.create('Васильев А.В.'),
+
+		anisimova   = Teacher.create('Анисимова Н.К.'),
+		panina      = Teacher.create('Панина Н.Л.'),
+		barbashina  = Teacher.create('Барбашина Э.В.'),
+
+		dubrov      = Teacher.create('Дубров С.В.'),
+		logashenko  = Teacher.create('Логашенко И.Б.'),
+		kond_suh    = Teacher.create('Кондауров, Суханов');
+		
 	var 
-	    nsu = function (aud) { return Location.create("",aud); },
-	    inp = function (aud) { return Location.create("ИЯФ",aud); };
+		nsu = function (aud) { return Location.create("", aud); },
+		inp = function (aud) { return Location.create("ИЯФ", aud); };
 
 	var 
-	    LECTURE  = Type.create('Лекция'),
-	    SEMINAR  = Type.create('Семинар'),
-	    PRACTICE = Type.create('Практикум'),
-	    SHAD     = Type.create('ШАД');
+		LECTURE  = Type.create('Лекция'),
+		SEMINAR  = Type.create('Семинар'),
+		PRACTICE = Type.create('Практикум');
 	
-	mon.add(Course.create( 9*60 +  0, 1*60 + 35, SEMINAR,  eng,   nsu(1325), anisimova    ));
-	mon.add(Course.create(10*60 + 50, 3*60 + 25, LECTURE,  cpl,   inp(508),  mig_val_idr  ));
+	mon.add(Course.create(10*60 + 50, 1*60 + 35, SEMINAR,  eng,   nsu(3140), anisimova    ));
 	
-	tue.add(Course.create( 9*60 +  0, 1*60 + 35, PRACTICE, plis,  inp(508),  unknown      ));
-	tue.add(Course.create(14*60 + 30, 1*60 + 35, SEMINAR,  plasm, nsu(333),  murahtin     ));
-	tue.add(Course.create(16*60 + 20, 1*60 + 35, LECTURE,  inft,  nsu('БА'), shamirzaev   ));
-	tue.add(Course.create(18*60 + 10, 1*60 + 35, SEMINAR,  inft,  nsu('БА'), abramkin     ));
+	tue.add(Course.create( 9*60 + 15, 1*60 + 20, PRACTICE, dsp,   nsu('ТСАНИ'), kond_suh  ));
 	
-	wed.add(Course.create(16*60 + 20, 1*60 + 35, LECTURE,  hoc,   nsu(313),  panina       ));
-	wed.add(Course.create(18*60 + 10, 3*60 + 10, SHAD,     cpp,   nsu(4204), dunaev       ));
+	wed.add(Course.create(10*60 + 45, 1*60 + 35, LECTURE,  nit,   inp(508),  dubrov       ));
+	wed.add(Course.create(18*60 + 10, 1*60 + 35, LECTURE,  pmod,  nsu(313),  panina       ));
+	
+	thu.add(Course.create(10*60 + 45, 3*60 + 20, LECTURE,  safe,  inp(508),  dubrov       ));
+	thu.add(Course.create(14*60 + 15, 1*60 + 35, LECTURE,  exan,  inp(508),  logashenko   ));
+	thu.add(Course.create(16*60 +  0, 1*60 + 35, PRACTICE, exan,  inp(508),  logashenko   ));
+	thu.add(Course.create(18*60 + 10, 1*60 + 35, LECTURE,  phil,  nsu('БА'), barbashina   ));
+	thu.add(Course.create(20*60 +  0, 1*60 + 35, SEMINAR,  phil,  nsu(313),  barbashina   ));
 
-	fri.add(Course.create(18*60 + 10, 1*60 + 35, SEMINAR,  phil,  nsu(429),  borisov      ));
+	fri.add(Course.create(18*60 + 10, 1*60 + 35, LECTURE,  symc,  nsu(442),  zhuravlev    ));
 
-	sat.add(Course.create(12*60 + 40, 1*60 + 35, SEMINAR,  plasm, nsu(442),  postupaev    ));
-	sat.add(Course.create(14*60 + 30, 3*60 + 25, SHAD,     alg,   nsu(1155), gat_sten     ));
-	// sat.add(Course.create(14*60 + 30, 1*60 + 35, LECTURE,  phil,  nsu(442),  borisov      ));
+	sat.add(Course.create(14*60 + 30, 1*60 + 35, LECTURE,  exph,  nsu(442),  telnov       ));
+	sat.add(Course.create(16*60 + 20, 1*60 + 35, SEMINAR,  exph,  nsu(442),  vasilyev     ));
 	
 	week.add(mon);
 	week.add(tue);
