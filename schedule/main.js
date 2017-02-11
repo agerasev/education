@@ -30,7 +30,7 @@ window.onload = function main()
 	var 
 		zhuravlev   = Teacher.create('Журавлёв А.Г.'),
 		telnov      = Teacher.create('Тельнов В.И.'),
-		vasilyev    = Teacher.create('Васильев А.В.'),
+		shoshin     = Teacher.create('Шошин А.А.'),
 
 		anisimova   = Teacher.create('Анисимова Н.К.'),
 		panina      = Teacher.create('Панина Н.Л.'),
@@ -62,10 +62,11 @@ window.onload = function main()
 	thu.add(Course.create(18*60 + 10, 1*60 + 35, LECTURE,  phil,  nsu('БА'), barbashina   ));
 	thu.add(Course.create(20*60 +  0, 1*60 + 35, SEMINAR,  phil,  nsu(313),  barbashina   ));
 
+	fri.add(Course.create(14*60 + 15, 1*60 + 35, SEMINAR,  exph,  inp('20Д-322'), shoshin ));
+	fri.add(Course.create(16*60 + 20, 1*60 + 35, SEMINAR,  symc,  nsu(212),  zhuravlev    ));
 	fri.add(Course.create(18*60 + 10, 1*60 + 35, LECTURE,  symc,  nsu(442),  zhuravlev    ));
 
-	sat.add(Course.create(14*60 + 30, 1*60 + 35, LECTURE,  exph,  nsu(442),  telnov       ));
-	sat.add(Course.create(16*60 + 20, 1*60 + 35, SEMINAR,  exph,  nsu(442),  vasilyev     ));
+	sat.add(Course.create(14*60 + 30, 1*60 + 35, LECTURE,  exph,  nsu('БА'),  telnov      ));
 	
 	week.add(mon);
 	week.add(tue);
