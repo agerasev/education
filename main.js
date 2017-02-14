@@ -49,9 +49,8 @@ window.onload = function main()
 		SEMINAR  = Type.create('Семинар'),
 		PRACTICE = Type.create('Практикум');
 	
-	mon.add(Course.create(10*60 + 50, 1*60 + 35, SEMINAR,  eng,   nsu(3140), anisimova    ));
-	
-	tue.add(Course.create( 9*60 + 15, 1*60 + 20, PRACTICE, dsp,   nsu('ТСАНИ'), kond_suh  ));
+	tue.add(Course.create( 9*60 +  0, 1*60 + 35, SEMINAR,  eng,   nsu(3140), anisimova    ));
+	tue.add(Course.create(10*60 + 50, 3*60 + 20, PRACTICE, dsp,   nsu('ТСАНИ'), kond_suh  ));
 	
 	wed.add(Course.create(10*60 + 45, 1*60 + 35, LECTURE,  nit,   inp(508),  dubrov       ));
 	wed.add(Course.create(18*60 + 10, 1*60 + 35, LECTURE,  pmod,  nsu(313),  panina       ));
