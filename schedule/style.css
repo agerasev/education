@@ -1,0 +1,12 @@
+html
+{
+	color: #AAAAAA;
+}
+
+a {
+	color: #EE6600;
+}
+
+a:hover {
+	color: #FFAA00;
+}
