@@ -4,6 +4,7 @@ html
 	padding: 0;
 	
 	font-family: "droid sans", "sans-serif";
+	color: #AAAAAA;
 }
 
 body
@@ -13,6 +14,14 @@ body
 	
 	background-color: #1F1F1F;
 	text-align: center;
+}
+
+a {
+	color: #EE6600;
+}
+
+a:hover {
+	color: #FFAA00;
 }
 
 div
