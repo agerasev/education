@@ -15,17 +15,17 @@ window.onload = function main()
 		sat = Day.create( 6, 'Суббота'     );
 		
 	var 
-		symc  = Subject.create( 'Симв.выч.', '', Subject.COMMON  ),
-		exph  = Subject.create( 'Эксп.физ.', '', Subject.COMMON  ),
+		symc  = Subject.create( 'Символьные вычисления',            '', Subject.COMMON  ),
+		exph  = Subject.create( 'Экспериментальная физика',         '', Subject.COMMON  ),
 
-		pmod  = Subject.create( 'Постмод.',  '', Subject.LIBERAL ),
-		phil  = Subject.create( 'Философия', '', Subject.LIBERAL ),
-		eng   = Subject.create( 'Ин.яз.',    '', Subject.LIBERAL ),
+		pmod  = Subject.create( 'Постмодернизм',                    '', Subject.LIBERAL ),
+		phil  = Subject.create( 'Философия',                        '', Subject.LIBERAL ),
+		eng   = Subject.create( 'Иностранный язык',                 '', Subject.LIBERAL ),
 
-		safe  = Subject.create( 'Безопасн.', '', Subject.SPECIAL ),
-		exan  = Subject.create( 'Эксп.ана.', '', Subject.SPECIAL ),
-		dsp   = Subject.create( 'Цифр.с.п.', '', Subject.SPECIAL ),
-		nit   = Subject.create( 'Нов.и.т.',  '', Subject.SPECIAL );
+		safe  = Subject.create( 'Информационная безопасность',      '', Subject.SPECIAL ),
+		exan  = Subject.create( 'Анализ экспериментальных данных',  '', Subject.SPECIAL ),
+		dsp   = Subject.create( 'Цифровые сигнальные процессоры',   '', Subject.SPECIAL ),
+		nit   = Subject.create( 'Новые информационные технологии',  '', Subject.SPECIAL );
 		
 	var 
 		zhuravlev   = Teacher.create('Журавлёв А.Г.'),
@@ -52,7 +52,6 @@ window.onload = function main()
 	tue.add(Course.create( 9*60 +  0, 1*60 + 35, SEMINAR,  eng,   nsu(3140), anisimova    ));
 	tue.add(Course.create(10*60 + 50, 3*60 + 20, PRACTICE, dsp,   nsu('ТСАНИ'), kond_suh  ));
 	
-	wed.add(Course.create(10*60 + 45, 1*60 + 35, LECTURE,  nit,   inp(508),  dubrov       ));
 	wed.add(Course.create(18*60 + 10, 1*60 + 35, LECTURE,  pmod,  nsu(313),  panina       ));
 	
 	thu.add(Course.create(10*60 + 45, 3*60 + 20, LECTURE,  safe,  inp(508),  dubrov       ));
@@ -61,7 +60,8 @@ window.onload = function main()
 	thu.add(Course.create(18*60 + 10, 1*60 + 35, LECTURE,  phil,  nsu('БА'), barbashina   ));
 	thu.add(Course.create(20*60 +  0, 1*60 + 35, SEMINAR,  phil,  nsu(313),  barbashina   ));
 
-	fri.add(Course.create(14*60 + 15, 1*60 + 35, SEMINAR,  exph,  inp('20Д-322'), shoshin ));
+	fri.add(Course.create(10*60 + 45, 1*60 + 35, LECTURE,  nit,   inp(508),  dubrov       ));
+	fri.add(Course.create(12*60 + 30, 1*60 + 35, SEMINAR,  exph,  inp('20Д-322'), shoshin ));
 	fri.add(Course.create(16*60 + 20, 1*60 + 35, SEMINAR,  symc,  nsu(212),  zhuravlev    ));
 	fri.add(Course.create(18*60 + 10, 1*60 + 35, LECTURE,  symc,  nsu(442),  zhuravlev    ));
 
